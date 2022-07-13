@@ -26,19 +26,6 @@ func (tp *TestPoint) GetCoordinates() cluster.GeoCoordinates {
 	}
 }
 
-//type MercatorPoint struct {
-//	Cluster cluster.ClusterPoint
-//	MercatorX int
-//	MercatorY int
-//}
-//
-//func mercator(p cluster.ClusterPoint) MercatorPoint {
-//	mp := MercatorPoint{}
-//	mp.Cluster = p
-//	mp.MercatorX =
-//
-//}
-
 func importData(filename string) []*TestPoint {
 	var points = struct {
 		Type     string

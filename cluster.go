@@ -23,11 +23,12 @@ type GeoPoint interface {
 //Struct that implements clustered points
 //could have only one point or set of points
 type ClusterPoint struct {
-	X, Y           float64
-	zoom           int
-	Id             int //Index for pint, Id for cluster
-	NumPoints      int
-	IncludedPoints []GeoPoint
+	Lng            float64    `json:"lng"`
+	Lat            float64    `json:"lat"`
+	zoom           int        `json:"zoom"`
+	Id             int        `json:"id"`
+	NumPoints      int        `json:"numPoints"`
+	IncludedPoints []GeoPoint `json:"includedPoints"`
 }
 
 func (cp *ClusterPoint) Coordinates() (float64, float64) {
